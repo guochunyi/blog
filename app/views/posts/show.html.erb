@@ -1,0 +1,57 @@
+<div class="main">
+	<div class="details">
+		<div class="article_title">
+<h2><%= @post.title %></h2>
+</div>
+<div class="article_content">
+<%= @post.text %>
+</div>
+<br />
+<div style="background-color:#C67171;text-align:right">
+	Update by <%= Time.now %>
+	</div>
+</div>
+
+<h2>Comments</h2>
+
+<div class='common_list'>
+<% @post.comments.each do |comment| %>
+<dl class="common_item">
+	
+<% if comment.user_id then %>
+<% u = User.find(comment.user_id) %>
+<% url = u.photo_url %>
+<dt class="comment_head">
+	<%= u.name %><%= Time.now %>
+    </dt>
+<% else %>
+<% url = '1.jpg' %>
+<% u = "游客 " %>
+<dt class="comment_head">
+	<%= u %><%= Time.now %>
+    </dt>
+<% end %>
+<dd class="comment_userface">
+<%= image_tag url %>
+</dd>
+<dd class="comment_body">
+<p><%= comment.text %></p>
+<p><%= time_ago_in_words comment.created_at %>ago</p>
+<p><%= link_to "Delete comment",[@post,comment], :method => :delete, :confirm => "Are you sure!" %></p>
+</dd>
+</dl>
+<%end%>
+</div>
+
+<div style="color:#b22222">Please Write Comment here</div>
+<%= form_for [@post,@post.comments.build] do |f| %>
+<p><%= f.text_area :text,:size => '40x10' %></p>
+<p><%= f.submit "Post Comment" %></p>
+<% end %>
+
+<p class="foot">
+	<%= link_to "Back",posts_path %> |
+	<%= link_to "Edit",edit_post_path(@post) %> |
+	<%= link_to "Delete",@post, :method => :delete, :confirm =>"Are you sure!" %>
+</p>
+</div>

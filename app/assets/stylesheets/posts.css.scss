@@ -1,0 +1,201 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+.posts {
+    
+
+	.top a { 
+		color:white;
+		text-decoration: underline;
+		font-family: Time New Roman;
+		font-size:15px;
+		padding:10px;
+		&:visited {
+			color: white;
+	      	}
+	}
+	
+
+.main a {
+	color: #CD3700;
+    text-decoration: none;
+	&:hover {
+		background-color: black;
+		color: white;
+	}
+
+	&:visited {
+		color: blue;
+		&:hover {
+		background-color: black;
+		color: white;
+	}
+	}
+}
+
+ .foot a {
+
+	    color: black;
+	    &:visited {
+		color: black;
+	      }
+}
+
+}
+
+.posts .main .list a {
+	line-height: 25px;
+}
+.top_nav .header {
+	width: 980px;
+	margin: 0 auto;
+	color:white;
+	font-size:15px;
+}
+
+.top_nav {
+	height:39px;
+	width: 100%;
+	-webkit-box-shadow: 0px 1px 3px 0px #000;
+	-moz-box-shadow: 0px 1px 3px 0px #000;
+	box-shadow: 0px 1px 3px 0px #000;
+	background-color:black;
+
+}
+
+
+.top_nav .header .gn_title {
+	float:left;
+	padding: 11px 19px 11px 20px;
+}
+
+.top_nav .header .gn_logout {
+	float:left;
+	padding: 11px 19px 11px 20px;
+	color:white;
+	
+}
+
+ .gn_logout  a{
+ 	color:white;
+ 	text-decoration: none;
+ 	&:visited {
+		color: white;
+	}
+ }
+
+.top_nav .header .gn_date {
+	float:right;
+	padding: 11px 19px 11px 20px;
+}
+
+.article_item {
+	border-bottom:dotted 1px #77d;
+}
+
+.details {
+	margin: 20px;
+}
+
+.article_title {
+	display: block;
+	margin: 5px 0px;
+	color: black;
+}
+
+.article_title h1 {
+	font-style: normal;
+	font-family: 'Microsoft YaHei';
+	font-size: 60px;
+}
+
+.details .article_content {
+	margin: 20px 0 0 0;
+	font-size: 14px;
+	background-color:#BDBDBD;
+}
+
+.comment_item {
+	margin:2px 10px;
+}
+
+.comment_head {
+	background: #ebf5f2;
+	padding:1px 4px;
+}
+
+.comment_userface {
+	float: left;
+	margin: 4px;
+}
+
+.comment_userface img {
+	width: 40px;
+	height: 40px;
+}
+
+.comment_body {
+	margin-left: 50px;
+	line-height: 20px;
+	padding: 5px;
+	min-height: 35px;
+}
+
+table{
+	border-spacing: 0px;
+}
+
+.list_line_even {
+	background: #e0f8f8;
+}
+
+.list_line_odd {
+	background: #cdbe70;
+}
+
+.boxed-group {
+	position: relative;
+	background: #efefef;
+	padding: 3px;
+	border-radius: 3px;
+	margin: 0 0 15px 0;
+}
+
+.boxed-group-inner {
+padding: 10px 10px;
+background: #fff;
+border: 1px solid #d8d8d8;
+border-top: 1px solid #ccc;
+border-bottom-left-radius: 1px;
+border-bottom-right-radius: 1px;
+color: #666;
+font-size: 13px;
+font: Helvetica, arial, freesans, clean, sans-serif;
+}
+
+.boxed-group-inner label {
+	font-weight: bold;
+}
+.boxed-group>h3, .boxed-group .heading {
+background-color: #e0e0e0;
+background-image: -moz-linear-gradient(#fafafa, #e0e0e0);
+background-image: -webkit-linear-gradient(#fafafa, #e0e0e0);
+background-image: linear-gradient(#fafafa, #e0e0e0);
+background-repeat: repeat-x;
+margin: 0;
+border-top-left-radius: 1px;
+border-top-right-radius: 1px;
+border: 1px solid #d8d8d8;
+border-bottom: none;
+padding: 10px 10px 11px 10px;
+font-size: 14px;
+text-shadow: 0 1px 0 #fff;
+}
+
+
+
+

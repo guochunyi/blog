@@ -1,0 +1,49 @@
+// Place all the styles related to the Sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.login_content {
+width: 742px;
+height: 284px;
+margin: 0px auto;
+padding: 57px 110px 90px 108px;
+float: left;
+}
+
+.login_content_left {
+width: 350px;
+height: 285px;
+float: left;
+}
+
+.login_content_left_top {
+height: 108px;
+border-bottom: 1px #CCC dashed;
+}
+
+.login_content_left_bottom {
+height: 177px;
+margin-top: 20px;
+}
+
+.login_content_right {
+	margin-right:20px;
+	width: 200px;
+	float:left;
+}
+
+.login_form {
+	width: 750px;
+	margin:0 auto;
+	background-color:#E0FFFF;
+}
+
+.logintable {
+    margin:0 auto;
+    margin-left:40px;
+}
+
+.logintable td {
+	padding: 5px;
+}
+
+

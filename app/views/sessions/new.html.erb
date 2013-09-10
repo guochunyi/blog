@@ -1,0 +1,51 @@
+<div style="height:100px">
+</div>
+<div class="login_form">
+	<% if flash[:alert] %>
+	<p id="notice"><%= flash[:alert] %></p>
+	<% end %>
+
+	<%= form_tag do %>
+	<fieldset>
+		<legend><h3>ログインしてください</h3></legend>
+
+		<div class="content_left">
+			<div class="login_content_left">
+				<div class="login_content_left_top">
+					<% url='4.jpg' %>
+					<%= image_tag url %>
+				</div>
+					<div class="login_content_left_bottom">
+			<table class="logintable">
+				<tr>
+					<th>
+			<%= label_tag :name,'名前:' %>
+		</th>
+		<td>
+			<%= text_field_tag :name, params[:name] %>
+			</td>
+			</tr>
+		     <tr>
+		     	<th>
+			<%= label_tag :password, 'パスワード:' %>
+			</th>
+			<td>
+			<%= password_field_tag :password, params[:password] %>
+		</td>
+		</tr>
+		<tr><th></th><td>
+			<div class="actions">
+			<%= submit_tag 'ログイン' %>
+		</div>
+		</td>
+		</tr>
+		</table>
+		</div>
+		</div>
+	</div>
+	<div class="login_content_right">
+					<% url='5.jpg' %>
+					<%= image_tag url %>
+				</div>
+	</fieldset>
+	<%end%>

@@ -1,0 +1,70 @@
+<div class="top_nav" style="white-space:nowrap;">
+<div class="header">
+   <div class="gn_title">
+    ようこそ：<%= User.find(session[:user_id]).name %>様
+   </div>
+
+   <div class="gn_logout">
+    
+    <%= link_to "new user",new_user_url, method: :get %> |
+    <%= link_to "logout",logout_url,method: :delete %> 
+   </div>
+
+   <div class="gn_date">
+    今日は<%= Date.current %>です
+   </div>
+</div>
+
+</div>
+
+<div class="truemain">
+<div style="font-size: 30px;color:black;text-align:center;font-family:Times New Roman;padding:10px;">
+Welcome to my Blog
+</div>
+
+<div class="main">
+  <table style="left:100px;top:10px;">
+  <tr>
+<td class="actions">
+  <div style="margin-left:-4px">
+  
+</div>
+</td>
+</tr>
+</table>
+	<div class="list">
+		<table style="border-collapse: collapse;border: 1px solid #AAA;margin:0 auto;">
+      <th>title</th>
+      <th>content</th>
+      <th>author</th>
+<% @posts.each do |post| %>
+<tr class="<%= cycle('list_line_odd','list_line_even') %>">
+<td>
+	
+  <h2><%= link_to post.title, post %></h2>
+
+  </td>
+  <td style="width:417px">
+  
+    <%= truncate(strip_tags(post.text),length: 100) %>
+  
+
+</td>
+<td style="text-align:center">
+  <%= User.find(session[:user_id]).name %>
+  </td>
+
+</tr>
+  <% end %>
+</table>
+
+</div>
+  
+
+  <div class="foot"><%= will_paginate @posts %></div>
+
+  <div class="foot">
+    <%= link_to "New post",new_post_path %>
+  </div>
+  </div>
+</div>

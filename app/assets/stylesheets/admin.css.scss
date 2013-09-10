@@ -1,0 +1,22 @@
+// Place all the styles related to the Admin controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.admin {
+    width: 500px;
+	margin:0 auto;
+	border: solid 1px;
+	text-align: center;
+}
+
+.list  td {
+vertical-align: text-top;
+	border: 1px solid #AAA;
+	padding: 5px 15px 5px 5px;
+	height:30px;
+	
+}
+.list th {
+	border: 1px solid #AAA;
+	padding: 5px 15px 5px 5px;
+	background-color: #EFEFEF;
+}
